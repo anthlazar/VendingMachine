@@ -2,6 +2,7 @@ package com.techelevator;
 
 import javax.xml.stream.Location;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -19,13 +20,24 @@ public class VendingMachine {
 
 
         List<Inventory> snacks = new ArrayList<Inventory>();
-        File input = new File("C:\\Users\\Student\\workspace\\module-1-capstone-team-4\\19_20_Capstone\\capstone\\ExampleFiles\\VendingMachine.txt");
 
 
         /**public String vendingMachineInventory (String, File){
          return inventory.get(inventory); }*/ // we may need this later on a different class
 
+
+        public static void main(String[] args){
+
+
+                    //if file doesnt exist
+
+
+
+
+
+
         try (Scanner scan = new Scanner(input)) {
+            File input = new File("C:\\Users\\Student\\workspace\\module-1-capstone-team-4\\19_20_Capstone\\capstone\\ExampleFiles\\VendingMachine.txt");
 
             //read each line of the file
             while (scan.hasNextLine()) {
@@ -51,11 +63,14 @@ public class VendingMachine {
         //public String getInventory(snacks){
            // return (this.getInventory);
 
-         public String thisMethodReturnsString(Inventory);
-        public static void main(String[] args) {
-            Clock alarmClock = new Clock();
+
 
         }
     }
 
 }
+
+
+/**public String thisMethodReturnsString(Inventory);
+    public static void main(String[] args) {
+*/

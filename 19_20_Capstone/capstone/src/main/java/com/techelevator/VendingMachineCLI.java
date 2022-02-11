@@ -2,6 +2,9 @@ package com.techelevator;
 
 import com.techelevator.view.Menu;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+
 public class VendingMachineCLI {
 
 	private static final String MAIN_MENU_OPTION_DISPLAY_ITEMS = "Display Vending Machine Items";
@@ -26,7 +29,12 @@ public class VendingMachineCLI {
 
 			if (choice.equals(MAIN_MENU_OPTION_DISPLAY_ITEMS)) {
 				VendingMachine vendingMachineMenu = new VendingMachine();// display vending machine items
-				System.out.println();
+				try {
+					File file = new File("C:\\Users\\Student\\workspace\\module-1-capstone-team-4\\19_20_Capstone\\capstone\\ExampleFiles\\VendingMachine.txt");
+
+				} catch (FileNotFoundException ex){
+					System.out.println("File Not Found");
+				}
 			} else if (choice.equals(MAIN_MENU_OPTION_PURCHASE)) {
 				// do purchase
 				while (true) {
@@ -53,5 +61,5 @@ public class VendingMachineCLI {
 				cli.run();
 			}
 		}
-	
+
 
