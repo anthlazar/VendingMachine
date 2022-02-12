@@ -4,10 +4,10 @@ import java.math.BigDecimal;
 import java.util.Map;
 
 public class Inventory {
-    private String type;
-    private String name;
-    private String location;
-    private BigDecimal price;
+    public String type;
+    public String name;
+    public String location;
+    public BigDecimal price;
 
     public static final String chips = "Chips";
     public static final String candy = "Candy";

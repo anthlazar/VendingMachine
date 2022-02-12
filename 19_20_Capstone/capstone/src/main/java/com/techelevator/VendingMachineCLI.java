@@ -37,10 +37,17 @@ public class VendingMachineCLI {
 				while (true) {
 					String purchaseChoice = (String) menu.getChoiceFromOptions(PURCHASE_MENU_OPTIONS);
 					Cash.cashDispensed();
-					if (purchaseChoice.equals(PURCHASE_MENU_OPTION1)) {
-						//implement option 1
+
+					if (purchaseChoice.equals(PURCHASE_MENU_OPTION1 )) {
+						Cash.chooseItem();
+
+					}else if  (purchaseChoice.equals(PURCHASE_MENU_OPTION1 )) {
+						Gum.gumMessage();
+
 					} else if (purchaseChoice.equals(PURCHASE_MENU_OPTION2)) {
-						// implement option 2
+						Cash.chooseItem();
+						//public static void main (String[]args){
+							;
 					} else if (choice.equals(BACK_TO_MAIN)) {
 						//Exit
 						break;

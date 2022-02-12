@@ -44,6 +44,14 @@ public class Cash {
 
     }
 
+    public static void chooseItem(){
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Please select item");
+        String userChoice = userInput.nextLine();
+
+    }
+
+
 }
 
 

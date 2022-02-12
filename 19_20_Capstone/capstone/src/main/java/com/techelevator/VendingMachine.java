@@ -34,6 +34,10 @@ public class VendingMachine {
                 BigDecimal price = new BigDecimal(columns[2]);
                 String type = columns[3];
 
+
+
+
+
                 Inventory snack = new Inventory(location, name, price, type);
                 inventory.put(location, snack);
             }
