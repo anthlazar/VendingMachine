@@ -3,37 +3,53 @@ package com.techelevator;
 import com.techelevator.view.Menu;
 
 import java.math.BigDecimal;
+import java.util.Scanner;
 
-public class Cash extends VendingMachineCLI{
-    public Cash(Menu menu) {
-        super(menu);
+public class Cash {
+
+
+    private BigDecimal cashReceived;
+    private BigDecimal amountDue;
+    private BigDecimal change;
+
+
+    //if cash received is more than amount due then return change
+    //constructor
+
+    public Cash(BigDecimal cashReceive, BigDecimal amountDue, BigDecimal change) {
+        this.cashReceived = cashReceive;
+        this.amountDue = amountDue;
+        this.change = change;
+
     }
 
-    //BigDecimal
+    public BigDecimal getCashReceived() {
+        return cashReceived;
+    }
 
-    /**
-     ***if cash received is more than amount due then return change***
+    public BigDecimal getAmountDue() {
+        return amountDue;
+    }
 
-     // options to declare the variable
-     BigDecimal cashReceived = money(input);
-     BigDecimal amountDue = balance;
-     BigDecimal change = (cashReceived - amountDue);
-     //
+    public BigDecimal getChange() {
+        return change;
+    }
+
+    //Method
+
+    public static void cashDispensed() {
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Please Insert Cash");
+        String userMoney =  userInput.nextLine();
+
+    }
+
+}
 
 
-
-
-     // thinking is to nest a if statement in a for each loop so that every time a new customer comes
-     it restarts.
-     // using the while loop will have to be stopped manually
-
-
-     for (   ""    :  ""     )
-
-
-     if (cashReceived > amountDue)
+   /**  if (cashReceived > amountDue);
      System.out.println("The customer should be given the change as follows:");
-     change = provided - price;
+     change = cashReceived - amountDue;
 
 
      else if (cashReceived == amountDue)
@@ -43,12 +59,11 @@ public class Cash extends VendingMachineCLI{
      System.out.println("Please insert more cash");
 
 
-     *  (item purchased > 5)
-     * return "Sold out";
+       (item purchased > 5)
+      return "Sold out";
+
+*/
 
 
-     */
 
 
-
-}

@@ -10,34 +10,15 @@ import java.util.*;
 
 
 public class VendingMachine {
+    //
     private Map<String, Inventory> inventory = new HashMap<String, Inventory>(); // itl suggested that we make the map a final, come back if it breaks code
-
     //constructor so that when ever we create a new vending machine it will import this file
     public VendingMachine() {
-
-
         //pulling the list of the inventory to be read in a loop
-
-
         List<Inventory> snacks = new ArrayList<Inventory>();
-
-
-        /**public String vendingMachineInventory (String, File){
-         return inventory.get(inventory); }*/ // we may need this later on a different class
-
-
-        public static void main(String[] args){
-
-
-                    //if file doesnt exist
-
-
-
-
-
+        File input = new File("C:\\Users\\Student\\workspace\\module-1-capstone-team-4\\19_20_Capstone\\capstone\\ExampleFiles\\VendingMachine.txt");
 
         try (Scanner scan = new Scanner(input)) {
-            File input = new File("C:\\Users\\Student\\workspace\\module-1-capstone-team-4\\19_20_Capstone\\capstone\\ExampleFiles\\VendingMachine.txt");
 
             //read each line of the file
             while (scan.hasNextLine()) {
@@ -59,16 +40,24 @@ public class VendingMachine {
         } catch (Exception ex) {
             System.out.println("There was an error");
         }
-        // method
-        //public String getInventory(snacks){
-           // return (this.getInventory);
-
-
-
         }
+        public void displayMenu(){
+        for (String key: inventory.keySet()){
+            Inventory menu = inventory.get(key);
+            menu.getLocation();
+            menu.getName();
+            menu.getPrice();
+
+            System.out.println(key + " " + menu.getName() + " " + menu.getPrice());
+        }
+        }
+
+
+
     }
 
-}
+
+
 
 
 /**public String thisMethodReturnsString(Inventory);

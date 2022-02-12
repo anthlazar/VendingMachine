@@ -12,8 +12,9 @@ public class VendingMachineCLI {
 	private static final String MAIN_MENU_OPTION_EXIT = "Exit";
 	private static final String[] MAIN_MENU_OPTIONS = {MAIN_MENU_OPTION_DISPLAY_ITEMS, MAIN_MENU_OPTION_PURCHASE, MAIN_MENU_OPTION_EXIT};
 
-	private static final String PURCHASE_MENU_OPTION1 = "Do Something";
-	private static final String PURCHASE_MENU_OPTION2 = "Do Something Else";
+	private static final String PURCHASE_MENU_OPTION1 = "Insert Money";
+
+	private static final String PURCHASE_MENU_OPTION2 = "Return Money";
 	private static final String BACK_TO_MAIN = "Back to main";
 	private static final String[] PURCHASE_MENU_OPTIONS = {PURCHASE_MENU_OPTION1, PURCHASE_MENU_OPTION2, BACK_TO_MAIN};
 
@@ -24,22 +25,18 @@ public class VendingMachineCLI {
 	}
 
 	public void run() {
+		VendingMachine vendingMachine = new VendingMachine();// display vending machine items
 		while (true) {
 			String choice = (String) menu.getChoiceFromOptions(MAIN_MENU_OPTIONS);
 
 			if (choice.equals(MAIN_MENU_OPTION_DISPLAY_ITEMS)) {
-				VendingMachine vendingMachineMenu = new VendingMachine();// display vending machine items
-				try {
-					File file = new File("C:\\Users\\Student\\workspace\\module-1-capstone-team-4\\19_20_Capstone\\capstone\\ExampleFiles\\VendingMachine.txt");
+					 vendingMachine.displayMenu();
 
-				} catch (FileNotFoundException ex){
-					System.out.println("File Not Found");
-				}
 			} else if (choice.equals(MAIN_MENU_OPTION_PURCHASE)) {
 				// do purchase
 				while (true) {
 					String purchaseChoice = (String) menu.getChoiceFromOptions(PURCHASE_MENU_OPTIONS);
-
+					Cash.cashDispensed();
 					if (purchaseChoice.equals(PURCHASE_MENU_OPTION1)) {
 						//implement option 1
 					} else if (purchaseChoice.equals(PURCHASE_MENU_OPTION2)) {
@@ -60,6 +57,11 @@ public class VendingMachineCLI {
 				VendingMachineCLI cli = new VendingMachineCLI(menu);
 				cli.run();
 			}
+
+
+
+
+
 		}
 
 
