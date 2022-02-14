@@ -9,10 +9,11 @@ public class Inventory {
     public String location;
     public BigDecimal price;
 
-    public static final String chips = "Chips";
-    public static final String candy = "Candy";
-    public static final String beverage = "Beverage";
-    public static final String gum = "Gum";
+
+    public static final String CHIPS = "Chips";
+    public static final String CANDY = "Candy";
+    public static final String BEVERAGE = "Beverage";
+    public static final String GUM = "Gum";
     //public static void add(Map<String, String> inventory) {} come back to this, randomly added by itJ
 
     //constructor
@@ -45,10 +46,15 @@ public class Inventory {
     public BigDecimal getPrice() {
         return price;
     }
-    public Inventory getInventory(){
+
+    public Inventory getInventory() {
         return getInventory();
     }
-        }
+
+
+
+
+}
 
 
 

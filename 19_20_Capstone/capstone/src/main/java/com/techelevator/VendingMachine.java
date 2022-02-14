@@ -11,7 +11,8 @@ import java.util.*;
 
 public class VendingMachine {
     //
-    private Map<String, Inventory> inventory = new HashMap<String, Inventory>(); // itl suggested that we make the map a final, come back if it breaks code
+    public Map<String, Inventory> inventory = new HashMap<String, Inventory>(); // itl suggested that we make the map a final, come back if it breaks code
+
     //constructor so that when ever we create a new vending machine it will import this file
     public VendingMachine() {
         //pulling the list of the inventory to be read in a loop
@@ -34,32 +35,29 @@ public class VendingMachine {
                 BigDecimal price = new BigDecimal(columns[2]);
                 String type = columns[3];
 
-
-
-
-
                 Inventory snack = new Inventory(location, name, price, type);
                 inventory.put(location, snack);
             }
         } catch (Exception ex) {
             System.out.println("There was an error");
         }
-        }
-        public void displayMenu(){
-        for (String key: inventory.keySet()){
+    }
+
+    public void displayMenu() {
+        for (String key : inventory.keySet()) {
             Inventory menu = inventory.get(key);
             menu.getLocation();
             menu.getName();
             menu.getPrice();
+            menu.getType();
 
             System.out.println(key + " " + menu.getName() + " " + menu.getPrice());
         }
-        }
-
-
 
     }
 
+
+}
 
 
 

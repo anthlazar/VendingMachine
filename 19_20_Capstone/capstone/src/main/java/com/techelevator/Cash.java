@@ -2,25 +2,27 @@ package com.techelevator;
 
 import com.techelevator.view.Menu;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-public class Cash {
-
-
+public class Cash extends VendingMachine{
     private BigDecimal cashReceived;
     private BigDecimal amountDue;
     private BigDecimal change;
+    private int numberOfItemsSold;
 
 
     //if cash received is more than amount due then return change
     //constructor
 
-    public Cash(BigDecimal cashReceive, BigDecimal amountDue, BigDecimal change) {
+    public Cash(BigDecimal cashReceive, BigDecimal amountDue, BigDecimal change, int numberOfItemsSold) {
         this.cashReceived = cashReceive;
         this.amountDue = amountDue;
         this.change = change;
-
+        this.numberOfItemsSold = numberOfItemsSold;
     }
 
     public BigDecimal getCashReceived() {
@@ -35,6 +37,8 @@ public class Cash {
         return change;
     }
 
+    public int getNumberOfItemsSold() { return numberOfItemsSold;}
+
     //Method
 
     public static void cashDispensed() {
@@ -48,12 +52,17 @@ public class Cash {
         Scanner userInput = new Scanner(System.in);
         System.out.println("Please select item");
         String userChoice = userInput.nextLine();
-
+        if (userChoice.startsWith("D")) {
+            System.out.println("Chew Chew, Yum");
+        } else if (userChoice.startsWith("C")) {
+            System.out.println("Glug Glug, Yum");
+        } else if (userChoice.startsWith("B")) {
+            System.out.println("Munch Munch, Yum");
+        } else if (userChoice.startsWith("A")) {
+            System.out.println("Crunch Crunch, Yum");
+        }
     }
-
-
 }
-
 
    /**  if (cashReceived > amountDue);
      System.out.println("The customer should be given the change as follows:");

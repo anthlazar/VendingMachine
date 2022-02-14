@@ -14,23 +14,13 @@ public class Gum extends VendingMachine {
 
     public Gum(String gum){
         this.gum = gum;
-
-
-
     }
 
-    public static void gumMessage() {
-    }
 
-    public void gumMesssage(){
-        String type = gum;
-
-        if(type == gum){
-            System.out.println("Chew Chew, Yum");
-        }
+}
 //}
 //
-    }
+
 
 //method
 
@@ -44,7 +34,7 @@ public class Gum extends VendingMachine {
     //system.out.println(c c y!)
 
 
-}
+
 
 
 

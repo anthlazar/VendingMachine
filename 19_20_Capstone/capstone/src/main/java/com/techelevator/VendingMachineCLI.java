@@ -42,7 +42,7 @@ public class VendingMachineCLI {
 						Cash.chooseItem();
 
 					}else if  (purchaseChoice.equals(PURCHASE_MENU_OPTION1 )) {
-						Gum.gumMessage();
+
 
 					} else if (purchaseChoice.equals(PURCHASE_MENU_OPTION2)) {
 						Cash.chooseItem();
