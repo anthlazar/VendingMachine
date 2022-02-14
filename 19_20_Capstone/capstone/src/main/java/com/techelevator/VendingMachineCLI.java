@@ -41,11 +41,14 @@ public class VendingMachineCLI {
 					if (purchaseChoice.equals(PURCHASE_MENU_OPTION1 )) {
 						Cash.chooseItem();
 
+				/**	}else if  (purchaseChoice.equals(PURCHASE_MENU_OPTION1 )) {
+						Cash.getChange();
+*/
 					}else if  (purchaseChoice.equals(PURCHASE_MENU_OPTION1 )) {
 
 
 					} else if (purchaseChoice.equals(PURCHASE_MENU_OPTION2)) {
-						Cash.chooseItem();
+
 						//public static void main (String[]args){
 							;
 					} else if (choice.equals(BACK_TO_MAIN)) {
